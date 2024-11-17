@@ -1,8 +1,7 @@
 
 import './App.css'
-import Main from './components/Main/Main'
+import Main from './components/principal/Main'
 import Navbar from './components/navbar/Navbar'
-import Chatbot from './components/Chatbot/Chatbot'
 
 function App() {
 
