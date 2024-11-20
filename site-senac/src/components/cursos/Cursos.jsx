@@ -5,24 +5,22 @@ import './styles.css';
 
 const Cursos = () => {
     const txt = textosCursos.cursos;
-    console.log(txt)
 
     return (
-        <>
-            <div>
-                <h1>CURSOS</h1>
-                <div id="grid-container">
+        <section className="cursos-section">
+            <div className="container-cursos">
+                <h1 className="cursos-title">CURSOS</h1>
+                <div className="cursos-grid">
                     {txt.map((curso, index) => (
                         <Card
-                        key={index}
-                        id="grid-item"
-                        img={curso.imagem}
-                        textos={curso.nome}
-                    />
+                            key={index}
+                            img={curso.imagem}
+                            textos={curso}
+                        />
                     ))}
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 

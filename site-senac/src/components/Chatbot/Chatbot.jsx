@@ -22,27 +22,26 @@ const Chatbot = () => {
    {isChatbotVisible && (
      <div className="chatbot-container">
        <div className="chatbot-header">
-         Chatbot
+         <span>Chatbot</span>
          <button
-           className="modal-close is-large"
+           className="close-button"
            onClick={toggleChatbot}
            aria-label="close"
-         />
+         >
+           ×
+         </button>
        </div>
        <div className="chatbot-messages">
-         <div className="message is-info">
+         <div className="message bot-message">
            <div className="message-body">Olá! Como posso ajudá-lo?</div>
-           <FontAwesomeIcon icon="fa-solid fa-headset" shake />
          </div>
-         <div className="message is-success">
+         <div className="message user-message">
            <div className="message-body">Olá! Gostaria de mais informações.</div>
-         
          </div>
-         {/* Mais mensagens podem ser adicionadas aqui */}
        </div>
        <div className="chatbot-input">
          <input type="text" className="input" placeholder="Digite sua mensagem..." />
-         <button>Enviar</button>
+         <button className="send-button">Enviar</button>
        </div>
      </div>
    )}
