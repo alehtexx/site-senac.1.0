@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { UilCommentsAlt } from '@iconscout/react-unicons'
 import "./chatbot.css";
 
 const Chatbot = () => {
@@ -13,8 +14,8 @@ const Chatbot = () => {
   return (
     <>
      {/* Botão para abrir/fechar o Chatbot */}
-     <button className="chat-toggle-btn" onClick={toggleChatbot}>
-     Chat
+     <button className="chat-toggle-btn" onClick={toggleChatbot} >
+     <UilCommentsAlt size="40" color="#61DAFB" />
    </button>
 
    {/* Container do Chatbot */}
@@ -31,9 +32,11 @@ const Chatbot = () => {
        <div className="chatbot-messages">
          <div className="message is-info">
            <div className="message-body">Olá! Como posso ajudá-lo?</div>
+           <FontAwesomeIcon icon="fa-solid fa-headset" shake />
          </div>
          <div className="message is-success">
            <div className="message-body">Olá! Gostaria de mais informações.</div>
+         
          </div>
          {/* Mais mensagens podem ser adicionadas aqui */}
        </div>

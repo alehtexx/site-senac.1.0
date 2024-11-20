@@ -1,0 +1,29 @@
+{
+    "cursos": [
+      {
+        "nome": "Curso de JavaScript básico",
+        "imagem": "/fast.jpg"
+      },
+      {
+        "nome": "Curso de React avançado",
+        "imagem": "/funil.jpg"
+      },
+      {
+        "nome": "Curso de CSS para desenvolvedores",
+        "imagem": "/guiavd.jpg"
+      },
+      {
+        "nome": "Curso de Node.js",
+        "imagem": "/layout.jpg"
+      },
+      {
+        "nome": "Curso de Design Responsivo",
+        "imagem": "/name.jpg"
+      },
+      {
+        "nome": "Curso de Testes Automatizados",
+        "imagem": "/tendencia.jpg"
+      }
+    ]
+  }
+  

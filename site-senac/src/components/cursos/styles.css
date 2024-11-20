@@ -1,0 +1,54 @@
+/* Estilo para o grid */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white; /* Fundo branco para o card */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para o card */
+    transition: transform 0.3s ease-in-out; /* Efeito de hover suave */
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+}
+
+.card-image img {
+    width: 100%; /* A imagem ocupará toda a largura do card */
+    height: 300px; /* Tamanho fixo para a imagem */
+    object-fit: cover; /* A imagem será cortada para cobrir o espaço */
+}
+
+.card-content {
+    padding: 2px; /* Espaçamento interno */
+}
+
+.card .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .subtitle {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsividade - para telas pequenas */
+@media (max-width: 768px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #grid-container {
+        grid-template-columns: 1fr; /* 1 coluna em telas ainda menores */
+    }
+}

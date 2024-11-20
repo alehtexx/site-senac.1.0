@@ -1,0 +1,39 @@
+#container-sobre {
+    margin: 0;
+    height: 60vh;
+    display: flex;   
+    justify-content: center;
+    background: white;
+    position: relative;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+}
+
+img {
+    padding-top: 6rem;
+    padding-right: 4rem;
+    
+    height: 50vh;
+    width: auto;
+}
+
+#sobre-titulo {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    color:#07224b;
+    padding-top: 3rem;
+    padding-bottom: 2rem; 
+}
+
+#sobre-texto {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #07224b;
+    padding-bottom: 2rem; 
+
+}
