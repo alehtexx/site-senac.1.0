@@ -11,35 +11,43 @@
 }
 
 #botao1 {
-    padding: 3rem;
+    padding: 7rem;
     font-family: "Montserrat", arial;
     font-size: 16px;
 }
 
 #nav-principal {
     text-align: left;
+    max-width: 90%;
 }
 
 #titulo {
-    padding: 3rem;
-    font-size: 36px;
+    padding: 7rem;
+    font-size: 50px;
     font-family: "Montserrat", sans-serif;
     color:#f5f5f5;
-    padding-bottom: 2rem; 
+    padding-bottom: 1rem; 
 }
 
 #subtitulo {
-    padding: 3rem;
-    font-size: 20px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    font-size: 25px;
     font-family: "Montserrat", sans-serif;
     color: #f5f5f5;
     padding-bottom: 2rem; 
 
 }
 
+#principal-image {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    height: 100vh;
+}
+
 #frontal {
-    width: 900px;
-    height: 100%;    
+    object-fit: cover;   
 }
 
 /* Responsividade */

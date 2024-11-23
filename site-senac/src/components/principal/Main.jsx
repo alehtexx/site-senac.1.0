@@ -21,8 +21,9 @@ function Main() {
         
        </a>
        </nav>
-
+<div id='principal-image'>
     <img src={img} id='frontal' alt="" />
+</div>
        <Chatbot />
       </div>
     </>

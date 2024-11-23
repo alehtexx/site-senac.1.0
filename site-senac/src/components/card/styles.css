@@ -1,4 +1,5 @@
 #img-card {
-    width: 368px;
-    height: auto;
+    width: auto;
+    height: 365px;
+    object-fit:  cover;
 }
