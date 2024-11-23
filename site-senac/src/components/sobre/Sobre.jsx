@@ -12,7 +12,7 @@ const Sobre = () => {
         <h1 id='sobre-titulo'>{textos['sobre-titulo']}</h1>
         <h2 id='sobre-texto'>{textos['sobre-texto']}</h2>
             </div>
-        <img src={imagem} />
+        <img id='img-sobre' src={imagem} />
         </div>
         </>
     

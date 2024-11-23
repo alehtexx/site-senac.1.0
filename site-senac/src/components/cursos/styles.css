@@ -1,34 +1,90 @@
 .cursos-section {
-    padding: 2rem 0;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    background: #f5f5f5;
 }
 
 .container-cursos {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
 .cursos-title {
-    font-size: 50px;
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    font-family: "Montserrat", sans-serif;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: #07224b;
+    font-weight: 700;
+    position: relative;
+}
+
+.cursos-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #07224b;
+    margin: 1rem auto 0;
+    border-radius: 2px;
 }
 
 .cursos-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: 1rem 0;
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .container-cursos {
+        max-width: 960px;
+    }
+    
     .cursos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
+    .cursos-section {
+        padding: 2rem 0;
+    }
+
+    .container-cursos {
+        padding: 0 1rem;
+    }
+
+    .cursos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cursos-section {
+        padding: 1.5rem 0;
+    }
+
+    .cursos-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
     .cursos-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

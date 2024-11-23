@@ -2,3 +2,256 @@
     width: 100px;
     height: 70px;
 }
+
+.navbar {
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-right: 20rem;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-title {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: #07224b;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar1-link {
+    color: #4b5563;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+
+
+
+.navbar-button {
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #4b5563;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        position: fixed;
+        top: 85px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0.75rem;
+    }
+
+    .navbar-brand {
+        margin-right: 0.5rem;
+    }
+
+    .navbar-logo {
+        width: 60px;
+    }
+
+    .navbar-title {
+        font-size: 1.125rem;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #1a202c;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .navbar-title {
+        color: #f7fafc;
+    }
+
+    .navbar-link {
+        color: #a0aec0;
+    }
+
+    .navbar-link::after {
+        background-color: #4299e1;
+    }
+
+    .hamburger span {
+        background: #a0aec0;
+    }
+
+    .navbar-menu {
+        background: #1a202c;
+    }
+}
+
+.navbar-toggle {
+    display: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #4b5563;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggle:hover {
+    background-color: #f3f4f6;
+}
+
+.navbar-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #4b5563;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-link:hover {
+    background-color: #f3f4f6;
+    color: #2563eb;
+}
+
+.navbar-link.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-menu.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .navbar-toggle {
+        color: #a0aec0;
+    }
+
+    .navbar-toggle:hover {
+        background-color: #2d3748;
+    }
+
+    .navbar-link:hover {
+        background-color: #2d3748;
+        color: #4299e1;
+    }
+}

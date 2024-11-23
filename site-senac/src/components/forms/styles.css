@@ -1,0 +1,53 @@
+/* Estilo do Container */
+#forms-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #07224b, rgb(0, 3, 12));
+    padding: 2rem;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+form {
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+input, button {
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+button[type="submit"] {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #1d4ed8, #1e40af);
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

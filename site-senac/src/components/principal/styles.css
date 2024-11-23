@@ -2,63 +2,126 @@
 /* Estilo do Container */
 #container {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: linear-gradient(to right, #07224b, rgb(0, 3, 12));
     position: relative;
+    padding: 2rem 4rem;
 }
 
 #botao1 {
-    padding: 7rem;
+    padding: 0;
     font-family: "Montserrat", arial;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 #nav-principal {
     text-align: left;
-    max-width: 90%;
+    max-width: 800px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    background: linear-gradient(90deg, rgba(7, 34, 75, 0.9) 0%, rgba(0, 3, 12, 0.8) 100%);
+    padding: 4rem 3rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    margin-left: 6rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #titulo {
-    padding: 7rem;
-    font-size: 50px;
+    padding: 0 0 1.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.125rem);
     font-family: "Montserrat", sans-serif;
-    color:#f5f5f5;
-    padding-bottom: 1rem; 
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 95%;
 }
 
 #subtitulo {
-    padding-left: 7rem;
-    padding-right: 7rem;
-    font-size: 25px;
+    padding: 0 0 2rem 0;
+    font-size: clamp(1.125rem, 3vw, 1.563rem);
     font-family: "Montserrat", sans-serif;
     color: #f5f5f5;
-    padding-bottom: 2rem; 
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 90%;
 }
 
 #principal-image {
-    display: flex;
-    width: 100%;
-    align-items: end;
-    height: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.85;
+    animation: floatImage 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(7, 34, 75, 0.5));
+    mix-blend-mode: luminosity;
 }
 
 #frontal {
-    object-fit: cover;   
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
 
-/* Responsividade */
+/* Breakpoints responsivos */
+@media (max-width: 1024px) {
+    #principal-image {
+        width: 40%;
+    }
+
+    #nav-principal {
+        min-height: 350px;
+        padding: 3rem 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    #container {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    #nav-principal {
+        min-height: auto;
+        padding: 2.5rem 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #titulo, #subtitulo, #botao1 {
+        padding: 1rem;
+    }
+
+    #principal-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        animation: none;
+    }
+
     .chatbot-container {
-        width: 300px;
+        width: 90%;
+        max-width: 300px;
         height: 400px;
     }
 
     .chatbot-header {
-        font-size: 18px;
+        font-size: 1rem;
     }
 
     .chatbot-messages {
@@ -66,7 +129,81 @@
     }
 
     .chat-toggle-btn {
-        padding: 10px;
-        font-size: 18px;
+        padding: 0.625rem;
+        font-size: 1rem;
     }
+
+    #titulo, #subtitulo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #titulo {
+        font-size: 1.75rem;
+        padding: 0.5rem;
+    }
+
+    #subtitulo {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    #botao1 {
+        padding: 0.5rem;
+    }
+
+    .button.is-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Animações personalizadas */
+.button.is-link {
+    transition: transform 0.3s ease;
+}
+
+.button.is-link:hover {
+    transform: scale(1.05);
+}
+
+#titulo, #subtitulo {
+    opacity: 0;
+    animation-fill-mode: forwards !important;
+}
+
+#botao1 .button {
+    opacity: 0;
+    animation-fill-mode: forwards !important;
+}
+
+/* Adicione estas animações */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de brilho ao redor da imagem */
+#principal-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(7, 34, 75, 0.2) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
 }

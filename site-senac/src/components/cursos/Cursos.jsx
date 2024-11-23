@@ -9,14 +9,21 @@ const Cursos = () => {
     return (
         <section className="cursos-section">
             <div className="container-cursos">
-                <h1 className="cursos-title">CURSOS</h1>
+                <h1 className="cursos-title animate__animated animate__fadeInDown">
+                    CURSOS
+                </h1>
                 <div className="cursos-grid">
                     {txt.map((curso, index) => (
-                        <Card
+                        <div 
                             key={index}
-                            img={curso.imagem}
-                            textos={curso}
-                        />
+                            className="animate__animated animate__fadeInUp"
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                            <Card
+                                img={curso.imagem}
+                                textos={curso}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

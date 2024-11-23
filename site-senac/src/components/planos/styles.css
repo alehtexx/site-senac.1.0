@@ -1,18 +1,136 @@
+#planos-section {
+    padding: 4rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+}
+
 #planos-container {
-    height: 100vh;
-    align-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 #planos {
     display: flex;
     justify-content: center;
-    
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-#planos-mensal {
-    margin-left: 15px;
+#planos-texto {
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    color: #07224b;
+    font-weight: 700;
+    position: relative;
 }
 
+#planos-texto h1 {
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    color: #07224b;
+    margin-bottom: 1rem;
+}
+
+#planos-texto h2 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: #4a5568;
+}
+
+#planos-gratis,
+#planos-mensal,
 #planos-anual {
-    margin-left: 15px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+#planos-gratis:hover,
+#planos-mensal:hover,
+#planos-anual:hover {
+    transform: translateY(-10px);
+}
+
+.invisible {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease-out;
+}
+
+@media (max-width: 1024px) {
+    #planos {
+        gap: 1.5rem;
+    }
+
+    #planos-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #planos-section {
+        padding: 2rem 1rem;
+    }
+
+    #planos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #planos-texto {
+        margin-bottom: 2rem;
+    }
+
+    #planos-texto h1 {
+        font-size: 2rem;
+    }
+
+    #planos-gratis,
+    #planos-mensal,
+    #planos-anual {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #planos-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    #planos-container {
+        padding: 1rem 0.5rem;
+    }
+
+    #planos {
+        gap: 1rem;
+    }
+
+    #planos-texto {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #planos-section {
+        background: #1a202c;
+    }
+
+    #planos-texto h1 {
+        color: #f7fafc;
+    }
+
+    #planos-texto h2 {
+        color: #a0aec0;
+    }
 }
