@@ -1,28 +1,34 @@
 {
     "cursos": [
       {
-        "nome": "Curso de JavaScript básico",
-        "imagem": "/fast.jpg"
+        "nome": "Como registrar o nome da sua  loja de maneira correta",
+        "imagem": "/fast.jpg",
+        "descricao": "descricao"
       },
       {
-        "nome": "Curso de React avançado",
-        "imagem": "/funil.jpg"
+        "nome": "Aprenda a aplicar o funil de  vendas no seu negócio",
+        "imagem": "/funil.jpg",
+        "descricao": "descricao"
       },
       {
-        "nome": "Curso de CSS para desenvolvedores",
-        "imagem": "/guiavd.jpg"
+        "nome": "Guia de vendas",
+        "imagem": "/guiavd.jpg",
+        "descricao": "descricao"
       },
       {
-        "nome": "Curso de Node.js",
-        "imagem": "/layout.jpg"
+        "nome": "Vendas rapidas",
+        "imagem": "/layout.jpg",
+        "descricao": "descricao"
       },
       {
-        "nome": "Curso de Design Responsivo",
-        "imagem": "/name.jpg"
+        "nome": "Layouts para lojas",
+        "imagem": "/name.jpg",
+        "descricao": "descricao"
       },
       {
-        "nome": "Curso de Testes Automatizados",
-        "imagem": "/tendencia.jpg"
+        "nome": "Tendências de modas",
+        "imagem": "/tendencia.jpg",
+        "descricao": "descricao"
       }
     ]
   }

@@ -3,6 +3,7 @@ import './styles.css';
 import textos from '../../content/textos.json';
 import Chatbot from '../Chatbot/Chatbot';
 import { UilArrowRight } from '@iconscout/react-unicons'
+import img from '../../assets/frontal.png'
 
 function Main() {
   
@@ -19,15 +20,14 @@ function Main() {
         </button>
         
        </a>
-       {/* <a href={meuArquivo} download="guia.pdf">
-       <button class="button is-link" >Download</button>
-       </a> */}
        </nav>
 
+    <img src={img} id='frontal' alt="" />
        <Chatbot />
       </div>
     </>
   );
 }
+
 
 export default Main;

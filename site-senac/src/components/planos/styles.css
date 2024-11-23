@@ -1,0 +1,18 @@
+#planos-container {
+    height: 100vh;
+    align-content: center;
+}
+
+#planos {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#planos-mensal {
+    margin-left: 15px;
+}
+
+#planos-anual {
+    margin-left: 15px;
+}
