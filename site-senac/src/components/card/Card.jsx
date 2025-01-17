@@ -1,5 +1,5 @@
 import './styles.css';
-
+import ebook from '../../assets/Ebook.pdf'
 const Card = ({ img, textos }) => {
     return (
         <div className="card">
@@ -9,8 +9,8 @@ const Card = ({ img, textos }) => {
             <div className="card-content">
                 <h5 className="card-title">{textos.nome}</h5>
                 <p className="card-description">{textos.descricao}</p>
-                <a href="#" className="card-button">
-                    Saiba mais
+                <a href={ebook} className="card-button">
+                        Visualizar ebook
                     <svg 
                         className="w-3.5 h-3.5 ms-2" 
                         aria-hidden="true" 

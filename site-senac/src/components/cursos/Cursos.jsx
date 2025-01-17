@@ -10,7 +10,7 @@ const Cursos = () => {
         <section className="cursos-section">
             <div className="container-cursos">
                 <h1 className="cursos-title animate__animated animate__fadeInDown">
-                    CURSOS
+                    Ebooks
                 </h1>
                 <div className="cursos-grid">
                     {txt.map((curso, index) => (

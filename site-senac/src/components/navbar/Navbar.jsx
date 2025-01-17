@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import imagem from "../../assets/chique.png";
 import './styles.css';
 
 function Navbar() {
@@ -13,9 +12,12 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <a href="/" className="navbar-brand">
-                    <img src={imagem} className="navbar-logo" alt="Classe Chique Logo" />
+                    
                     <span className="navbar-title">Classe Chique</span>
                 </a>
+                <p className="navbar-espaço"></p>
+
+
 
                 <button className="navbar-toggle" onClick={toggleMenu} aria-label="Menu">
                     <span className="sr-only">Abrir menu principal</span>
@@ -32,7 +34,7 @@ function Navbar() {
                         <li><a href="#" className="navbar1-link">Serviços</a></li>
                         <li><a href="#" className="navbar1-link">Contato</a></li>
                     </ul>
-                    <button className="navbar-button">Começar Agora</button>
+                    
                 </div>
             </div>
         </nav>
